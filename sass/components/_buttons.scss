@@ -1,0 +1,43 @@
+@use "../utils/" as *;
+
+@mixin btn {
+	background: $color-primary;
+	display: block;
+	margin: 0 auto;
+	border-radius: 7px;
+	font-size: 1rem;
+	padding: 12px 82px;
+	color: #fff;
+	cursor: pointer;
+	border: 0;
+	transition: background-color .2s linear;
+}
+
+.btn-signup {
+	@include btn;
+
+	padding: 15px 23px;
+	margin: 0;
+	margin-top: 59px;
+
+	font-size: 1.3rem;
+	text-transform: capitalize;
+	outline: none;
+	&:hover {
+		background: lighten($color-primary, 10%);
+	}
+}
+
+.btn-primary {
+	@include btn;
+
+	padding: 1em;
+	margin-top: 0.5em;
+
+	font-size: 16px;
+	background: $color-primary;
+	border-radius: 15px;
+	&:hover {
+		background: $color-btn-hover;
+	}
+}

@@ -1,0 +1,103 @@
+@use "../utils/variables" as *;
+
+/*** RESET CSS ***/
+
+* {
+	box-sizing: border-box;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+ul li {
+	list-style-type: none;
+}
+
+input:focus {
+	outline: none;
+}
+
+/*** BASE ***/
+
+html {
+	height: 100%;
+}
+
+body {
+	max-width: $max-width;
+	height: 100%;
+	margin: 0 auto;
+
+	font-family: $font-primary;
+	font-size: 18px;
+
+	display: flex;
+	flex-direction: column;
+}
+
+main {
+	padding-top: 0.5vw;
+	padding-left: 2vw;
+	padding-right: 2vw;
+	margin: 1px 20px 15px;
+
+	font-size: 130%;
+	font-weight: bolder;
+	color: black;
+	border-radius: 2rem;
+	text-align: justify;
+
+	flex: 1 1;
+}
+
+p {
+	margin-bottom: 0;
+	padding: 0.5vw;
+}
+
+img {
+	padding-right: 1rem;
+}
+
+/* JAVASCRIPT */
+
+.noScroll {
+	overflow: hidden;
+}
+
+.modal {
+	opacity: 0;
+	visibility: hidden;
+	transition: $modal-duration;
+	
+	&.visible {
+		opacity: 1;
+		visibility: visible;
+		.modal__content {
+			transform: translateY(0);
+		}
+	}
+
+	&__content {
+		transform: translateY(-150px);
+		transition: transform $modal-duration;
+	}
+	&__form {
+		display: none;
+		&.visible {
+			display: block;
+		}
+	}
+	&__thanksPage {
+		display: none;
+		&.visible {
+			display: flex;
+		}
+	}
+}

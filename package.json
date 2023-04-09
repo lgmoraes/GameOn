@@ -1,0 +1,16 @@
+{
+	"name": "lgmoraes-game_on",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.html",
+	"scripts": {
+		"sass": "sass --watch ./sass/main.scss:./modal.css --style compressed"
+	},
+	"browserslist": "last 4 versions",
+	"keywords": [],
+	"author": "",
+	"license": "",
+	"devDependencies": {
+		"sass": "^1.61.0"
+	}
+}

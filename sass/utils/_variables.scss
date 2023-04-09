@@ -1,0 +1,21 @@
+$color-primary: #FE142F;
+$color-secondary: #232323;
+$color-tertiary: #279E7A;
+$color-accent: #F6F6F6;
+$color-btn-hover: #3876ac;
+
+
+$font-primary: "DM Sans", Arial, Helvetica, sans-serif;
+$font-secondary: Roboto, sans-serif;
+$max-width: 1300px;
+$header-margin: 3.5%;
+$header-height-mobile: 80px;
+$modal-width: 500px;
+$modal-duration: 0.8s;
+$transition-duration: 0.3s;
+
+
+$breakpoints: (
+    mobile: 500px,
+    tablet: 840px
+);

@@ -1,0 +1,17 @@
+@use "../utils/" as *;
+
+.copyrights {
+	color: $color-primary;
+	padding: 0;
+	margin: 60px 0 30px;
+
+	font-size: 1rem;
+	font-weight: bolder;
+
+	&::before {
+		content: "Copyright 2014 - 2022, GameOn Inc.";
+	}
+    @include tablet {
+        text-align: center;
+    }
+}

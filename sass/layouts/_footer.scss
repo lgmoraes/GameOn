@@ -1,0 +1,10 @@
+@use "../utils/" as *;
+
+.footer {
+    padding: 10px;
+    padding-left: 2vw;
+	padding-right: 2vw;
+	margin: 0 20px;
+
+    font-family: $font-primary;
+}

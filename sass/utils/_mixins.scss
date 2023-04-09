@@ -1,0 +1,45 @@
+@use "variables" as *;
+
+
+@mixin btn-hover {
+    transition: .3s;
+    z-index: 1;
+    &:hover {
+        @include shadow-primary-hover;
+
+        &::after {
+            opacity: .5;
+        }
+    }
+    &::after {
+        content: "";
+
+        background-color: white;
+        opacity: 0;
+        transition: .3s;
+
+        position: absolute;
+        top: 0;left: 0;right: 0;bottom: 0;
+        z-index: -1;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: map-get($breakpoints, mobile)) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
+
+@mixin tablet-only {
+    @media screen
+    and (min-width: (map-get($breakpoints, mobile)+1))
+    and (max-width: map-get($breakpoints, tablet)) {
+        @content;
+    }
+}
